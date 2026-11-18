@@ -1,0 +1,433 @@
+
+:root {
+  --green: #183e32;
+  --green-light: #315b49;
+  --gold: #b99b62;
+  --cream: #f8f6f0;
+  --white: #ffffff;
+  --text: #292d29;
+  --muted: #777b73;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+/* NAVEGACIÓN */
+
+.header {
+  background: var(--cream);
+  border-bottom: 1px solid #e9e5dc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo,
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-button {
+  background: var(--green);
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 27px;
+  color: var(--green);
+  cursor: pointer;
+}
+
+/* PORTADA */
+
+.hero {
+  padding: 85px 0;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(42px, 5vw, 65px);
+  color: var(--green);
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  color: var(--muted);
+  max-width: 490px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 15px 27px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.primary-button:hover {
+  background: var(--green-light);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 75%;
+  max-width: 340px;
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(15px 20px 20px #0002);
+  transform: rotate(3deg);
+}
+
+/* CATÁLOGO */
+
+.books-section {
+  background: var(--white);
+  padding: 95px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.book-card {
+  background: var(--cream);
+  padding: 24px;
+  border-radius: 8px;
+  transition: .25s;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+}
+
+.book-cover {
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.book-cover img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(7px 10px 12px #0002);
+}
+
+.book-card h3 {
+  color: var(--green);
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.book-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.book-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  display: block;
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 13px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.buy-button:hover {
+  background: var(--green-light);
+}
+
+/* AUTORA */
+
+.author-section {
+  padding: 100px 0;
+}
+
+.author-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.author-photo {
+  background: #e9e4d8;
+  min-height: 360px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+}
+
+.author-content h2 {
+  color: var(--green);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.author-content p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+/* SUSCRIPCIÓN */
+
+.newsletter {
+  background: var(--green);
+  color: white;
+  padding: 85px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.newsletter > .container > p {
+  color: #d5dfd8;
+  margin-bottom: 25px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 480px;
+  margin: auto;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  border: none;
+  background: var(--gold);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newsletter-message {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+  background: #102c23;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-logo {
+  color: white;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 13px;
+  color: #c4d0c8;
+  margin-bottom: 8px;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: var(--cream);
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-grid,
+  .author-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-image img {
+    max-width: 240px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    max-width: 430px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .author-photo {
+    min-height: 260px;
+  }
+
+  .section-heading h2,
+  .author-content h2 {
+    font-size: 33px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter h2 {
+    font-size: 30px;
+  }
+}

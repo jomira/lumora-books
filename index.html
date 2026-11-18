@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Lumora Books: libros digitales para inspirar, aprender y transformar.">
+
+  <title>Lumora Books | Libros que dejan huella</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="#inicio" class="logo">Lumora Books.</a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#libros">Libros</a>
+        <a href="#autor">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#libros" class="nav-button">Explorar libros</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PORTADA PRINCIPAL -->
+
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">UN UNIVERSO DE PALABRAS</span>
+
+          <h1>Historias que inspiran. Ideas que transforman.</h1>
+
+          <p class="hero-text">
+            Bienvenida a Lumora Books, un espacio donde
+            las palabras cobran vida y cada lectura
+            puede convertirse en el comienzo de algo nuevo.
+          </p>
+
+          <a href="#libros" class="primary-button">
+            Descubrir libros →
+          </a>
+
+        </div>
+
+        <div class="hero-image">
+          <img
+            id="heroBook"
+            src="assets/covers/mi-voz-me-cuida.png"
+            alt="Portada del libro Mi voz me cuida"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+
+    <section class="books-section" id="libros">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">NUESTRA BIBLIOTECA</span>
+          <h2>Libros para descubrir</h2>
+          <p>Pequeñas lecturas, grandes transformaciones.</p>
+        </div>
+
+        <div class="books-grid" id="booksGrid">
+          <!-- Los libros aparecerán mediante JavaScript -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SOBRE LA AUTORA -->
+
+    <section class="author-section" id="autor">
+
+      <div class="container author-grid">
+
+        <div class="author-photo">
+          <span>Tu fotografía irá aquí</span>
+        </div>
+
+        <div class="author-content">
+
+          <span class="eyebrow">DETRÁS DE LUMORA BOOKS</span>
+
+          <h2>Una voz, muchas historias. Un propósito que importa.</h2>
+
+          <p>
+            Lumora Books nace con el propósito de crear historias que inspiren, 
+            enseñen y acompañen a los niños en su crecimiento.
+          </p>
+
+          <p>
+            Nuestra primera colección, 
+            Mi voz me cuida, 
+            reúne cinco cuentos que promueven el autocuidado, 
+            el reconocimiento de las emociones y el aprendizaje de los límites personales, 
+            recordándoles a los pequeños que su voz importa y que tienen derecho a decir NO.
+          </p>
+
+          <p>
+            Cada historia invita también a padres, 
+            abuelos y docentes a compartir momentos de lectura, 
+            diálogo y reflexión.
+          </p>
+
+          <p>
+            Creemos que una historia puede dejar mucho más que un recuerdo: 
+            puede convertirse en una enseñanza para toda la vida.
+          </p>
+
+
+          <a href="#libros" class="primary-button">
+            Explorar biblioteca
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACTO Y SUSCRIPCIÓN -->
+
+    <section class="newsletter" id="contacto">
+
+      <div class="container">
+
+        <span class="eyebrow">NUESTRA COMUNIDAD</span>
+
+        <h2>Las buenas historias merecen compartirse.</h2>
+
+        <p>
+          Suscríbete para conocer nuestros próximos
+          lanzamientos y novedades.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Tu correo electrónico"
+            aria-label="Correo electrónico"
+            required
+          >
+
+          <button type="submit">Suscribirme</button>
+
+        </form>
+
+        <p id="newsletterMessage" class="newsletter-message"
+          aria-live="polite"></p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <a href="#inicio" class="footer-logo">Lumora Books.</a>
+
+      <p>Un universo de palabras para transformar ideas.</p>
+
+      <p class="copyright">
+        © <span id="year"></span> Lumora Books.
+        Todos los derechos reservados.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
